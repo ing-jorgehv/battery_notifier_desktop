@@ -8,8 +8,12 @@ from ui.alert_window import show_battery_full_alert
 
 
 
-# Change the codification of the output terminal to UTF-8
-sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
+# Safe UTF-8 output redirection for production (when creating .exe file) to avoid errors
+try:
+    # Change the codification of the output terminal to UTF-8
+    sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
+except (AttributeError, ValueError):
+    pass  # Happens when running with PyInstaller and --noconsole
 
 
 
