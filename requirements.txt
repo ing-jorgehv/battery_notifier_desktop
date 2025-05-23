@@ -1,0 +1,4 @@
+psutil == 7.0.0
+plyer == 2.1.0
+pystray==0.19.5
+pillow== 11.2.1
