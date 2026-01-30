@@ -4,7 +4,7 @@ from plyer import notification
 
 def notify_battery_low():
     notification.notify(
-        title="🪫 Battery at 20%",
+        title="🪫 Battery at 21%",
         message="Your battery is almost empty. Plug the charger.",
         timeout=30 # seconds
     )
